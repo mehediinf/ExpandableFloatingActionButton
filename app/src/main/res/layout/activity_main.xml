@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <!-- FAB for action  -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_fab_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Action"
+        android:gravity="end"
+        app:icon="@drawable/action"
+        />
+
+
+
+    <!-- FAB for add alarm  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_alarm_Id"
+        app:layout_constraintBottom_toTopOf="@id/add_fab_id"
+        app:layout_constraintEnd_toEndOf="@id/add_fab_id"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/alarm"
+        app:fabSize="normal"
+        android:contentDescription="@string/app_name"
+        />
+
+    <!-- Text for FAB for add alarm  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_alarm_txt_id"
+        android:text="Add Alarm"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/add_alarm_Id"
+        app:layout_constraintEnd_toStartOf="@id/add_alarm_Id"
+        app:layout_constraintTop_toTopOf="@id/add_alarm_Id"
+        android:textColor="@android:color/black"
+        />
+
+
+    <!-- FAB for add person  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_person_Id"
+        app:layout_constraintBottom_toTopOf="@id/add_alarm_Id"
+        app:layout_constraintEnd_toEndOf="@id/add_alarm_Id"
+        app:layout_constraintStart_toStartOf="@id/add_alarm_Id"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/person_add"
+        app:fabSize="normal"
+        android:contentDescription="@string/app_name"
+        />
+
+    <!-- Text for FAB for add alarm  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_person_txt_id"
+        android:text="Add Person"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/add_person_Id"
+        app:layout_constraintEnd_toStartOf="@id/add_person_Id"
+        app:layout_constraintTop_toTopOf="@id/add_person_Id"
+        android:textColor="@android:color/black"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
